@@ -1,25 +1,12 @@
 from collections import defaultdict
-import string
-import numpy as np
-import tensorflow as tf
+import numpy as numpy
 import csv
-import json
-import shutil
 import sys
 import os
 import re
 
 import util
-
 import argparse
-
-parser = argparse.ArgumentParser(description='Argument parser')
-
-parser.add_argument("--tsv", type=str, default="./data/sv-SE/train.tsv", help="The datafile containing the sentences")
-parser.add_argument("--target",type=str, default="SE", help="the outputfile")
-parser.add_argument("--mozilla", type=bool, default=True , help= "true if the dataset used is Mozilla Common Voice and false if it is Libri Speech" )
-
-args = parser.parse_args()
 
 def save_dict(target, dictionary):
     with open(target, 'w+', encoding='utf-8') as output_file:
@@ -50,7 +37,10 @@ def dictionary_libri_speech():
     dictionary = defaultdict(lambda: len(dictionary))
     lines = []
     for key in test_train_dev:
-        base_path = os.path.join("data/LibriSpeech/" , test_train_dev[key], "LibriSpeech", test_train_dev[key])
+        base_path = os.path.join("data/LibriSpeech/" , 
+            test_train_dev[key], 
+            "LibriSpeech", 
+            test_train_dev[key])
         dir_list = os.listdir(base_path)
         data = []
         for x in dir_list:
@@ -75,17 +65,23 @@ def dictionary_libri_speech():
 
     return dictionary, lines
 
-
-
-
-
 if __name__ == '__main__':
-    from_path = args.tsv
-    target_file = "./dict/" + args.target + "_word.txt"
-    print(target_file)
-    if args.mozilla:
-        dictionary = dictionary_mozilla_common_voice(from_path)
-        save_dict(target_file, dictionary)
-    else: 
+
+    parser = argparse.ArgumentParser(description='Argument parser')
+
+    parser.add_argument("--tsv", type=str, default="./data/sv-SE/train.tsv", help="The datafile containing the sentences")
+    parser.add_argument("--target",type=str, default="SE", help="the outputfile")
+    parser.add_argument("--librispeech", default=False, action="store_true" ,
+         help= "true if the dataset used is librispeech and false if it is Mozilla common voice" )
+
+    args = parser.parse_args()
+
+    if args.librispeech:
+        target_file = "./dict/Libri_word.txt"
         dictionary, lines = dictionary_libri_speech()
-        save_dict(target_file,dictionary)
+    else: 
+        from_path = args.tsv
+        target_file = "./dict/" + args.target + "_word.txt"
+        dictionary = dictionary_mozilla_common_voice(from_path)
+    
+    save_dict(target_file,dictionary)
