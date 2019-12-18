@@ -1,6 +1,7 @@
 data/*.tsv/
 data/*/
 data/*.tar.gz
+data/LibriSpeech
 
 
 graphs*
@@ -9,10 +10,9 @@ plots/*
 
 logs/*
 
-FE_data/*/*.tfrecord
-FE_data/*.tfrecord
-FE_data/New/*
 FE_data/*/
+FE_data/LibriSpeech
+
 models/*
 
 dict/*_word.txt

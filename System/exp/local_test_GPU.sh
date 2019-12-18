@@ -1,13 +1,13 @@
 #/bin/bash
 
-model="LogisticModel"
+model="StreamSpeechM33"
 
 new_model=True
 
 python3 src/AM.py \
     --batch_size=128 \
     --num_gpu=1 \
-    --LSTM_size=80 \
+    --LSTM_size=256 \
     --conv_output=256 \
     --conv_width=11 \
     --max_frames=1600 \
@@ -18,7 +18,7 @@ python3 src/AM.py \
     --curriculum_learning=False \
     --steps_until_max_frames=1000 \
     --dropout=0.05 \
-    --input_tfrecord="FE_data/LibriSpeech/train000*.tfrecord" \
+    --input_tfrecord="FE_data/LibriSpeech/train0000*.tfrecord" \
     --dictionary="EN_chars" \
     --include_unknown=False \
     --new_model=$new_model \

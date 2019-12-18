@@ -29,7 +29,7 @@ flags.DEFINE_boolean("activate_learning_rate_decay", False, "determine whether t
 flags.DEFINE_integer("num_parallel_reader", 4, "The amount of files read in parallel")
 flags.DEFINE_integer("buffer_size", 4, "The buffer size for the queue")
 flags.DEFINE_string("dictionary", "SE", "The dictionary file used as integers to letters")
-flags.DEFINE_string("wordcollection", "libri_word.txt", "The file containing all words in the dataset")
+flags.DEFINE_string("wordcollection", "Libri_word.txt", "The file containing all words in the dataset")
 flags.DEFINE_integer("beam_width", 20, "The width of the beam search when finding a sentence")
 flags.DEFINE_boolean("include_unknown", True, "a boolean to define if the training should include unknown symbols in the string.")
 flags.DEFINE_boolean("custom_beam_search", False, "If we should use the custom wordbased beam search")
