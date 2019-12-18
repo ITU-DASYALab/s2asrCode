@@ -1,6 +1,6 @@
 #/bin/bash
 
-model="LogisticModel"
+model="StreamSpeechM33"
 
 new_model=True
 
