@@ -1,20 +1,7 @@
 # StreamSpeechV2
 
-Code and repository for the report for VLDB.
+This repository contains the source code for an Automatic Speech Recognition (ASR) System converting speech to text. 
 
-Folder structure is:
+The Latex files for the report documenting the system are [in this repository](https://github.com/ITU-PITLab/s2asrLatex).
 
-```bash
-+-- LateX
-|   # The report folder
-+-- System
-|   # The system folder, containing the source code.
-```
-
-## System
-
-A reconstruction and refinement of Master Thesis
-
-[Link to previous repository](https://github.itu.dk/S2/StreamSpeech)
-
-[New Code readme](./System/README.md)
+Instructions on installing and executing the system is documented in [the System README](./System/README.md). 
