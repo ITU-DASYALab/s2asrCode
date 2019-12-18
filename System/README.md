@@ -128,7 +128,7 @@ From the System path, execute the following:
     # CPU (cpu small) will fit to 50 samples!
     ./exp/local_test.sh 
 
-    # GPU (small) Using one GPU!
+    # GPU (small) Using one GPU! but correct model (local_test_eval does not work with this.)
     ./exp/local_test_GPU.sh 
 
     #Evaluation: 
