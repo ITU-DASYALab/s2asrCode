@@ -176,10 +176,6 @@ Get terminal where there is acces to GPU:
 srun -J test -t 24:00:00 -c 48 -p gpu --gres=gpu:v100:2 --mem=190000M --pty bash -i
 ´´´
 
-´´´bash
-srun -J test -t 24:00:00 -c 32 -p gpu --gres=gpu:m10:8 --mem=500000M --pty bash -i
-´´´
-
 
 Get information about the GPUs on each of the nodes in HPC:
 
