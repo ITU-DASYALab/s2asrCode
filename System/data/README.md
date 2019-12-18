@@ -41,10 +41,19 @@
     ```
 
 4. Then convert all the FLAC files to Wav using the "libri_flac_to_wav" script in the data directory. 
-This does not remove the original FLAC files.
+This does not remove the original FLAC files. This can take some time.
 
     ```bash
     ./libri_flac_to_wav.sh
+    ```
+
+5.  If you want to use less storage space for this data, then it is possible to remove the .tar.gz at this point as well as the .flac files.
+
+    ```bash
+    # Delete the flac files:
+    find . -iname "*.flac" -delete
+    # Delete the tar.gz:
+    rm *.tar.gz
     ```
 
 [Back](../README.md)
