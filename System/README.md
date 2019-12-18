@@ -170,7 +170,7 @@ Remember to start Tensorboard on the server.
 
 ## HPC
 
-Get terminal where there is acces to GPU:
+Get Terminal with access to GPU:
 
 ´´´bash
 srun -J test -t 24:00:00 -c 48 -p gpu --gres=gpu:v100:2 --mem=190000M --pty bash -i
@@ -186,3 +186,11 @@ Get information about the GPUs on each of the nodes in HPC:
 ´´´bash
 sinfo -o=%N--%D--%G--%m
 ´´´
+
+## Combined Mozilla Dataset
+
+The Mozilla dataset has a collection of validated clips. The collection contains test and validation set, hence these clips needs to be filtered if the collection is to be used for training. This is done using the Python script "src/create_voice_dataset.py". The script takes "test", "dev", and "validated" as argument to specify the TSV-files containing the different collections. The combined dataset is saved in the path specified by the argument "target". 
+
+When the new combined dataset is saved, the feature extraction can be completed. The "src/FE.py" script has an argument "clip_path" that specifies where the sound files are stored. This path needs to refer to the original path of the dataset to avoid copying all clips to a new location. 
+
+The dictionary for the new collection needs to be generated before training the model. This is done using "src/create_dictionary.py" with the "tsv" argument set to the path of the combined TSV-file. 
