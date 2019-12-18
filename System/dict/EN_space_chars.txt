@@ -26,5 +26,5 @@ x
 y
 z
 '
-# End of English Dictionary Used in the large language model. 
+# End of English Dictionary Used in the large language model from Mozilla common voice. 
 # It is including the space character unlike the EN_chars.txt.
