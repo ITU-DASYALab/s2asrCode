@@ -105,7 +105,13 @@ From the System path, execute the following:
     ```bash
     mkdir -p logs/FE
     ```
-3. Get CTC Word Beam Search from https://github.com/Sebastian-ba/CTCWordBeamSearch and place it in the same directory as StreamSpeech: 
+3. Make a dictionary containing all the words used. This is made using only the words in the training data.
+
+   ```bash
+   python3 src/create_dictionary.py --librispeech
+   ```
+
+4. Get CTC Word Beam Search from https://github.com/Sebastian-ba/CTCWordBeamSearch and place it in the same directory as StreamSpeech: 
 
     ```bash
     git clone https://github.com/Sebastian-ba/CTCWordBeamSearch.git
@@ -116,7 +122,7 @@ From the System path, execute the following:
     cd cpp/proj
     ./buildTF.sh
     ```
-4. Train a model. A small model can be trained on a small dataset by doing the following: 
+5. Train a model. A small model can be trained on a small dataset by doing the following: 
     ```bash
     #Training:
     # CPU (cpu small) will fit to 50 samples!
