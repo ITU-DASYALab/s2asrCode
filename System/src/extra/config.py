@@ -30,7 +30,7 @@ Config = ConfigSingleton() # pylint: disable=invalid-name
 
 def initialize_globals():
     c = AttrDict()
-    c.alphabet = Alphabet(os.path.abspath("dict/"+ FLAGS.dictionary + "2.txt"))
+    c.alphabet = Alphabet(os.path.abspath("dict/EN_space_chars.txt"))
 
     # Units in the sixth layer = number of characters in the target language plus one
     c.n_hidden_6 = c.alphabet.size() + 1 # +1 for CTC blank label
