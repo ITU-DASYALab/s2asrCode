@@ -47,6 +47,8 @@ This does not remove the original FLAC files.
     ./libri_flac_to_wav.sh
     ```
 
+[Back](../README.md)
+
 ## Mozilla Common Voice 
 
 ### GUI
@@ -74,3 +76,4 @@ Extract the dataset from the .tar.gz, into a folder appropriately named:
 mkdir sv-SE
 nohup tar xvzf sv-SE.tar.gz -C ./sv-SE &
 ```
+[Back](../README.md)
