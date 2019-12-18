@@ -18,7 +18,7 @@ python3 src/AM.py \
     --curriculum_learning=False \
     --steps_until_max_frames=1000 \
     --dropout=0.05 \
-    --input_tfrecord="FE_data/LibriSpeech/train000*.tfrecord" \
+    --input_tfrecord="FE_data/LibriSpeech/train0000*.tfrecord" \
     --dictionary="EN_chars" \
     --include_unknown=False \
     --new_model=$new_model \
