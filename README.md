@@ -1,4 +1,4 @@
-# StreamSpeechV2
+# S2 ASR Code
 
 This repository contains the source code for an Automatic Speech Recognition (ASR) System converting speech to text. 
 
