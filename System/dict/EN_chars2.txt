@@ -26,4 +26,5 @@ x
 y
 z
 '
-# End of English Dictionary Used in the large language model.. therefore including the space character.
+# End of English Dictionary Used in the large language model. 
+# It is including the space character unlike the EN_chars.txt.
