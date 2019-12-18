@@ -7,7 +7,7 @@ new_model=True
 python3 src/AM.py \
     --batch_size=128 \
     --num_gpu=1 \
-    --LSTM_size=80 \
+    --LSTM_size=256 \
     --conv_output=256 \
     --conv_width=11 \
     --max_frames=1600 \
