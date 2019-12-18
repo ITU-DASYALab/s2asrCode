@@ -9,10 +9,8 @@ plots/*
 
 logs/*
 
-FE_data/*/*.tfrecord
-FE_data/*.tfrecord
-FE_data/New/*
-FE_data/*/
+FE_data/*
+
 models/*
 
 dict/*_word.txt
